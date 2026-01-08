@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presto - Bubble Tea Paradise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Presto</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#drinks" class="nav-link">Our Signature Drinks</a></li>
+                <li><a href="#addons" class="nav-link">Add-ons</a></li>
+                <li><a href="#checkout" class="nav-link">Checkout</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#account" class="nav-link" id="account-link">Account</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="restaurant-name">PRESTO</h1>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Drinks Section -->
+    <section class="drinks-section" id="drinks">
+        <div class="section-bubbles"></div>
+        <h2 class="section-title">Our Signature Drinks</h2>
+        <div class="drinks-container">
+            <div class="drink-card" data-drink="milk-tea" data-base-price="650" data-detail="Our Milk Bubble Tea blends premium black tea with fresh milk and perfectly cooked tapioca pearls. Sweetened lightly to enhance natural flavors, it's a comforting classic enjoyed by all ages.">
+                <div class="drink-image-wrapper">
+                    <img src="images/iced-milk-tea-bubble-.jpg" alt="Milk Bubble Tea" class="drink-image">
+                    <div class="ice-cube" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+                    <div class="ice-cube" style="top: 60%; right: 20%; animation-delay: 1s;"></div>
+                    <div class="ice-cube" style="bottom: 20%; left: 30%; animation-delay: 2s;"></div>
+                </div>
+                <h3 class="drink-name">Milk Bubble Tea</h3>
+                <p class="drink-price">650 PKR</p>
+                <p class="drink-description">Classic creamy milk tea with soft, chewy tapioca pearls for a smooth and delicious experience.</p>
+                <button class="drink-info-btn">View Details</button>
+            </div>
+            <div class="drink-card" data-drink="mango-bubble-tea" data-base-price="750" data-detail="Fresh mango puree blended with black tea and milk. Soft pearls provide fun texture for a perfect summer drink.">
+                <div class="drink-image-wrapper">
+                    <img src="images/mango_passion_fruit_boba.png" alt="Mango Bubble Tea" class="drink-image">
+                    <div class="ice-cube" style="top: 25%; right: 15%; animation-delay: 0.5s;"></div>
+                    <div class="ice-cube" style="top: 55%; left: 20%; animation-delay: 1.5s;"></div>
+                    <div class="ice-cube" style="bottom: 25%; right: 30%; animation-delay: 2.5s;"></div>
+                </div>
+                <h3 class="drink-name">Mango Bubble Tea</h3>
+                <p class="drink-price">750 PKR</p>
+                <p class="drink-description">Refreshing tropical mango flavor combined with chewy pearls for a fruity delight.</p>
+                <button class="drink-info-btn">View Details</button>
+            </div>
+            <div class="drink-card" data-drink="chocolate-bubble-tea" data-base-price="750" data-detail="Premium cocoa, fresh milk, and chewy pearls combine for a sweet indulgent treat for chocolate lovers.">
+                <div class="drink-image-wrapper">
+                    <img src="images/iced-coffee-with-chocolate.avif" alt="Chocolate Bubble Tea" class="drink-image">
+                    <div class="ice-cube" style="top: 30%; left: 20%; animation-delay: 0.3s;"></div>
+                    <div class="ice-cube" style="top: 50%; right: 25%; animation-delay: 1.3s;"></div>
+                    <div class="ice-cube" style="bottom: 30%; left: 25%; animation-delay: 2.3s;"></div>
+                </div>
+                <h3 class="drink-name">Chocolate Bubble Tea</h3>
+                <p class="drink-price">750 PKR</p>
+                <p class="drink-description">Rich chocolate flavor with creamy milk and soft tapioca pearls.</p>
+                <button class="drink-info-btn">View Details</button>
+            </div>
+            <div class="drink-card" data-drink="strawberry-bubble-tea" data-base-price="750" data-detail="Fresh strawberry puree with milk and black tea. Chewy pearls make it a fun, refreshing drink for any time of day.">
+                <div class="drink-image-wrapper">
+                    <img src="images/stawberry tea.jpeg" alt="Strawberry Bubble Tea" class="drink-image">
+                    <div class="ice-cube" style="top: 20%; right: 20%; animation-delay: 0.7s;"></div>
+                    <div class="ice-cube" style="top: 60%; left: 15%; animation-delay: 1.7s;"></div>
+                    <div class="ice-cube" style="bottom: 20%; right: 25%; animation-delay: 2.7s;"></div>
+                </div>
+                <h3 class="drink-name">Strawberry Bubble Tea</h3>
+                <p class="drink-price">750 PKR</p>
+                <p class="drink-description">Sweet and tangy strawberry flavor with soft pearls in every sip.</p>
+                <button class="drink-info-btn">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drink Details Modal -->
+    <div class="drink-modal" id="drink-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-image-wrapper">
+                <img id="modal-image" src="" alt="" class="modal-image">
+            </div>
+            <div class="modal-info">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-price" id="modal-price"></p>
+                <p class="modal-description" id="modal-description"></p>
+                <p class="modal-detail" id="modal-detail"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add-ons Section -->
+    <section class="addons-section" id="addons">
+        <div class="section-bubbles"></div>
+        <h2 class="section-title">Customize Your Drink</h2>
+        <div class="addons-container">
+            <div class="drink-selector">
+                <label for="drink-select">Select a Drink:</label>
+                <select id="drink-select" class="drink-select">
+                    <option value="">-- Choose a Drink --</option>
+                    <option value="milk-tea" data-base-price="650">Milk Bubble Tea - 650 PKR</option>
+                    <option value="mango-bubble-tea" data-base-price="750">Mango Bubble Tea - 750 PKR</option>
+                    <option value="chocolate-bubble-tea" data-base-price="750">Chocolate Bubble Tea - 750 PKR</option>
+                    <option value="strawberry-bubble-tea" data-base-price="750">Strawberry Bubble Tea - 750 PKR</option>
+                </select>
+            </div>
+            
+            <div class="addons-options" id="addons-options" style="display: none;">
+                <h3 class="addons-title">Add-ons</h3>
+                <div class="addon-item">
+                    <label class="addon-checkbox">
+                        <input type="checkbox" id="ice-topping" data-price="50" data-name="Ice Topping">
+                        <span class="checkmark"></span>
+                        <span class="addon-label">Ice Topping</span>
+                        <span class="addon-price">+50 PKR</span>
+                    </label>
+                </div>
+                <div class="addon-item">
+                    <label class="addon-checkbox">
+                        <input type="checkbox" id="extra-sugar" data-price="20" data-name="Extra Sugar">
+                        <span class="checkmark"></span>
+                        <span class="addon-label">Extra Sugar</span>
+                        <span class="addon-price">+20 PKR</span>
+                    </label>
+                </div>
+                <div class="addon-item">
+                    <label class="addon-checkbox">
+                        <input type="checkbox" id="extra-milk" data-price="50" data-name="Extra Milk">
+                        <span class="checkmark"></span>
+                        <span class="addon-label">Extra Milk</span>
+                        <span class="addon-price">+50 PKR</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="price-summary" id="price-summary" style="display: none;">
+                <div class="summary-content">
+                    <h3 class="summary-title">Price Summary</h3>
+                    <div class="summary-details" id="summary-details"></div>
+                    <div class="total-price">
+                        <strong>Total: <span id="total-amount">0</span> PKR</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout & Payment Section -->
+    <section class="checkout-section" id="checkout">
+        <div class="section-bubbles"></div>
+        <h2 class="section-title">Checkout & Payment</h2>
+        <div class="checkout-container">
+            <div class="checkout-content">
+                <p class="checkout-description">Choose your preferred payment method for a smooth and secure checkout experience.</p>
+                <div class="payment-methods" id="payment-methods">
+                    <div class="payment-option" data-method="cash">
+                        <input type="radio" name="payment" id="cash" value="cash">
+                        <label for="cash" class="payment-label">
+                            <div class="payment-icon">💵</div>
+                            <div class="payment-info">
+                                <h3>Cash on Pickup</h3>
+                                <p>Pay when you collect your order</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-method="card">
+                        <input type="radio" name="payment" id="card" value="card">
+                        <label for="card" class="payment-label">
+                            <div class="payment-icon">💳</div>
+                            <div class="payment-info">
+                                <h3>Online Card Payment</h3>
+                                <p>Secure card payment</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-method="easypaisa">
+                        <input type="radio" name="payment" id="easypaisa" value="easypaisa">
+                        <label for="easypaisa" class="payment-label">
+                            <div class="payment-icon">📱</div>
+                            <div class="payment-info">
+                                <h3>EasyPaisa</h3>
+                                <p>Pay via EasyPaisa wallet</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-method="nayapay">
+                        <input type="radio" name="payment" id="nayapay" value="nayapay">
+                        <label for="nayapay" class="payment-label">
+                            <div class="payment-icon">💸</div>
+                            <div class="payment-info">
+                                <h3>NayaPay</h3>
+                                <p>Pay via NayaPay wallet</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="checkout-actions">
+                    <button class="btn-checkout" id="proceed-checkout" disabled>Proceed to Checkout</button>
+                </div>
+                <div class="checkout-message" id="checkout-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Signup Section -->
+    <!-- Order Details Section -->
+    <section class="account-section" id="account">
+        <div class="section-bubbles"></div>
+        <h2 class="section-title">Complete Your Order</h2>
+        <div class="account-container">
+            <div class="account-content">
+                <p class="account-description">Please enter your details to finalize your order.</p>
+                
+                <!-- Order Form -->
+                <div class="auth-form" id="order-form-container">
+                    <h3 class="form-title">Customer Details</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="custName">Full Name</label>
+                            <input type="text" id="custName" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="custPhone">Phone Number</label>
+                            <input type="tel" id="custPhone" name="phone" required placeholder="0300-1234567">
+                        </div>
+                        <div class="form-group">
+                            <label for="custCity">City / Address</label>
+                            <input type="text" id="custCity" name="city" required placeholder="Enter your delivery address">
+                        </div>
+                        <button type="submit" class="btn-auth">Place Order</button>
+                    </form>
+                    <div class="auth-message" id="order-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Contact Section -->
+    <section class="unified-contact-section" id="location">
+        <div class="section-bubbles"></div>
+        <div class="unified-contact-box">
+            <div class="contact-column">
+                <h2 class="contact-section-title">Contact Us</h2>
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <span class="detail-icon">📍</span>
+                        <div class="detail-content">
+                            <strong>Address</strong>
+                            <p>Presto Restaurant<br>Presto SteakHouse DHA Phase 2 Islamabad<br>Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="detail-icon">📧</span>
+                        <div class="detail-content">
+                            <strong>Email</strong>
+                            <p>info@presto.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="detail-icon">📞</span>
+                        <div class="detail-content">
+                            <strong>Phone</strong>
+                            <p>+923481551272</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="detail-icon">🕒</span>
+                        <div class="detail-content">
+                            <strong>Hours</strong>
+                            <p>Monday - Sunday: 12:00 PM - 12:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-minimal">
+                    <p class="instagram-minimal-text">Follow us for new updates</p>
+                    <a href="https://www.instagram.com/bubbletea_prestodhaphase2?igsh=OGxxMzMxanRlNXpo" target="_blank" rel="noopener noreferrer" class="instagram-minimal-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="map-column">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.224339836489!2d73.16556899999999!3d33.529849999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfed9f2fca40ab%3A0xfa0843009b6cc154!2sPRESTO!5e1!3m2!1sen!2s!4v1766781354829!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bubbles"></div>
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Presto Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
